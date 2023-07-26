@@ -16,9 +16,4 @@ public class GreetingResource {
         return "Hello RESTEasy";
     }
 
-    @GET
-    @Produces(MediaType.TEXT_HTML)
-    public InputStream index() {
-        return getClass().getResourceAsStream("/META-INF/resources/index.html");
-    }
 }
