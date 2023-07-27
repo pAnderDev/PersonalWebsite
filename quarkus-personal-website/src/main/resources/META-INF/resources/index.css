@@ -19,10 +19,10 @@ body {
     font-size: 1.125em;
     line-height: 1.6;
     color: white;
-    background-color: #000000;
+    background-color: #191923;
     background-image: var(--gradient);
     background-size: 400%;
-    animation: bg-animation 20s infinite alternate;
+    animation: bg-animation 10s infinite alternate;
 
 }
 
