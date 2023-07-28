@@ -1,7 +1,3 @@
-h1 {
-    text-align: center;
-    color: white;
-}
 
 :root {
     --gradient: linear-gradient(
@@ -13,7 +9,6 @@ h1 {
 }
 body {
     font-family: basic-sans, sans-serif;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     font-size: 1.125em;
@@ -21,8 +16,9 @@ body {
     color: white;
     background-color: #191923;
     background-image: var(--gradient);
-    background-size: 400%;
-    animation: bg-animation 10s infinite alternate;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
+    
 
 }
 
@@ -34,3 +30,74 @@ body {
         background-position: right;
     }
 }
+
+.sidebar {
+    width: 150px;
+    background-color: #35353b;
+    color: white;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar a.active {
+    border-bottom: 2px #ce1fde;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 50px 100px;
+    background-color: white;
+    background-clip: content-box; /* Clip the background to the content box */
+    overflow: auto;
+    height: calc(100vh - 40px);
+  }
+
+  h1 {
+    color: black;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  #topbttn {
+    display: none; /*hide the button*/
+    position: fixed; /*fix the location*/
+    bottom: 20px; /*set it 20px from the bottom*/
+    right: 40px; /*set it 40px from the right*/
+    height: 25px;
+    width: 25px;
+    z-index: 99; /*setting so it doesnt overlap*/
+    border: #191923; /*black border*/
+    outline: none; /*no outline*/
+    background-color:#35353b; /*button color is pink*/
+    color:white; /*text color is white*/
+    cursor: pointer; /*pointer cursor*/
+    padding: 15px; /*some square padding*/
+    border-radius: 50%; /*rounded edges*/
+    font-size: 16px;
+    text-align: center;
+
+  }
+
+  #topbttn:hover {
+    background-color: #5b1fde;
+  }
+
