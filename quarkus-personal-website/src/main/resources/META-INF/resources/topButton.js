@@ -1,19 +1,25 @@
 let topButton = document.getElementById("topbttn");
-let main = document.getElementsByClassName("main-content");
+let main = document.querySelector(".main-content");
 //When the user scrolls down 20px from the top of the document show the button
 main.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if(document.main.scrollTop > 5 | document.main.scrollTop > 5) {
+
+    const scrollHeight = main.scrollHeight;
+    const scrollTop = main.scrollTop;
+    const clientHeight = main.clientHeight;
+
+    if(scrollTop + clientHeight >= scrollHeight - 25) {
         topButton.style.display = "block";
+        topButton.classList.add("show");
     } 
     else {
-        topButton.style.display = "none";
+        topButton.classList.remove("show");
     }
 }
 
 
 function topFunction() {
-    document.main.scrollTop = 0; //For Safari
-    document.main.scrollTop = 0; //for all other browsers
+    main.scrollTop = 0; //For Safari
+    main.scrollTop = 0; //for all other browsers
 }

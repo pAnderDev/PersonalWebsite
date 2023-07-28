@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrick Anderson</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="quarkus-personal-website\src\main\resources\META-INF\images\NOVAN-4.ico">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -12,17 +14,17 @@
     
     <div class="sidebar">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work-history">Work History</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#work-history">Work History</a></li>
+            <li><a class="nav-link" href="#project">Project</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
         </ul>
     </div>
     
-    <script src="topButton.js"></script>
-    <div class="main-content">
-                
+    <script src="activeSection.js"></script>
+    
+    <div class="main-content">        
         <section id="about">
             <h1>About</h1>
             <p>
@@ -92,10 +94,10 @@
               </p>
             
         </section>
-    </div>
-    <button onclick="topFunction()" style="display: none;" id="topbttn" title="Go to top" value="^">^</button>
+    <button onclick="topFunction()" id="topbttn" style="display: none;" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
 
-    <script src="activeSection.js"></script>
+    </div>
+    <script src="topButton.js"></script>
 </body>
 
 </html>

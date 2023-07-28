@@ -60,7 +60,9 @@ body {
   }
 
   .sidebar a.active {
-    border-bottom: 2px #ce1fde;
+    border-bottom: 10px solid #ce1fde;
+    text-decoration: underline;
+    background-clip: content-box;
   }
   
   .main-content {
@@ -75,6 +77,10 @@ body {
     border-radius: 20px; 
   }
 
+  section.active {
+    background-color: #545255; /* Customize the active section background color as needed */
+  }
+
   h1 {
     color: black;
     padding: 0;
@@ -82,29 +88,38 @@ body {
   }
 
   #topbttn {
-    display: none; /*hide the button*/
+    
     position: fixed; /*fix the location*/
     bottom: 20px; /*set it 20px from the bottom*/
     right: 40px; /*set it 40px from the right*/
-    height: 25px;
-    width: 25px;
+    height: 50px;
+    width: 50px;
     z-index: 99; /*setting so it doesnt overlap*/
-    border: #191923; /*black border*/
+    border:3px solid #191923; /*black border*/
     outline: none; /*no outline*/
-    background-color:#35353b; /*button color is pink*/
-    color:white; /*text color is white*/
+    background-color:white; /*button color is pink*/
+    color:black; /*text color is white*/
     cursor: pointer; /*pointer cursor*/
-    padding: 20px; /*some square padding*/
+    padding: 12px; /*some square padding*/
     border-radius: 50%; /*rounded edges*/
     font-size: 24px;
     align-items: center;
     justify-content: center;
+    opacity: 0; /* Start with opacity 0 to hide the button */
+    transition: opacity 0.6s ease;
 
+  }
+
+  #topbttn.show {
+    transition: opacity 0.6s ease;
+    opacity: 1;
   }
 
   #topbttn:hover {
-    background-color: #5b1fde;
+    background-color: #191923;
+    color: white;
   }
+
 
   p {
     text-align: left;

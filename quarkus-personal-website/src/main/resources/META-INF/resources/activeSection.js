@@ -1,19 +1,20 @@
 
 const sections = document.querySelectorAll("section");
-const sidebarlinks = document.querySelectorAll(".sidebar a");
+const sidebarLinks = document.querySelectorAll(".sidebar a");
+let mainSection = document.querySelector(".main-content");
 
 function setActiveSection(sectionId) {
     sections.forEach((section) => {
-        section.classList.toggle("active", section.id == sectionId);
+        section.classList.toggle("active", section.id === sectionId);
     });
 
-    sidebarlinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") == '#${sectionId}');
+    sidebarLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
     });
 }
 
 document.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
+    const scrollPosition = mainSection.scrollTop;
     let activeSection = "about"; //default active section view
     let maxVisible = 0;
 
@@ -37,3 +38,36 @@ document.addEventListener("scroll", () => {
         setActiveSection("about");
     }
 });
+
+
+// const sections = document.querySelectorAll("section");
+// const sidebarLinks = document.querySelectorAll(".sidebar a");
+
+// function setActiveSection(sectionId) {
+//   sections.forEach((section) => {
+//     section.classList.toggle("active", section.id === sectionId);
+//   });
+
+//   sidebarLinks.forEach((link) => {
+//     link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
+//   });
+// }
+
+// const observerOptions = {
+//   root: document.querySelector(".main-content"),
+//   threshold: 0.6, // Adjust the threshold as needed
+// };
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       const sectionId = entry.target.id;
+//       setActiveSection(sectionId);
+//     }
+//   });
+// }, observerOptions);
+
+// sections.forEach((section) => {
+//   observer.observe(section);
+// });
+
