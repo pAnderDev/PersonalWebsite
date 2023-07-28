@@ -8,15 +8,16 @@
         #ce1fde);
 }
 body {
-    font-family: basic-sans, sans-serif;
     display: flex;
+    padding: 0;
+    margin: 0;
     justify-content: center;
     font-size: 1.125em;
     line-height: 1.6;
-    color: white;
+    height: 100vh;
+    background-size: 400%;
     background-color: #191923;
     background-image: var(--gradient);
-    background-size: 200%;
     animation: bg-animation 5s infinite alternate;
     
 
@@ -64,11 +65,14 @@ body {
   
   .main-content {
     flex: 1;
-    padding: 50px 100px;
     background-color: white;
     background-clip: content-box; /* Clip the background to the content box */
-    overflow: auto;
-    height: calc(100vh - 40px);
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-left: 300px; /* Adjust the top and bottom padding to create space */
+    padding-right: 300px; /* Adjust the top and bottom padding to create space */
+    border-radius: 20px; 
   }
 
   h1 {
@@ -90,14 +94,20 @@ body {
     background-color:#35353b; /*button color is pink*/
     color:white; /*text color is white*/
     cursor: pointer; /*pointer cursor*/
-    padding: 15px; /*some square padding*/
+    padding: 20px; /*some square padding*/
     border-radius: 50%; /*rounded edges*/
-    font-size: 16px;
-    text-align: center;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
 
   }
 
   #topbttn:hover {
     background-color: #5b1fde;
+  }
+
+  p {
+    text-align: left;
+    padding-left: 15px;
   }
 
