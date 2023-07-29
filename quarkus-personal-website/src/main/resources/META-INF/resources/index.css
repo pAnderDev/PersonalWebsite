@@ -96,6 +96,7 @@ body {
     color: black;
     padding: 0;
     margin-left: 10px;
+    text-decoration: underline #ce1fde solid;
   }
 
   p {
