@@ -7,6 +7,7 @@
         #8e1fde,
         #ce1fde);
 }
+/*full page background*/
 body {
     display: flex;
     padding: 0;
@@ -32,6 +33,7 @@ body {
     }
 }
 
+/*navigation side bard*/
 .sidebar {
     width: 150px;
     background-color: #35353b;
@@ -39,7 +41,7 @@ body {
     padding: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
 
   }
   
@@ -64,7 +66,15 @@ body {
     text-decoration: underline;
     background-clip: content-box;
   }
+
+  .navbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
+  /*main content section*/
   .main-content {
     flex: 1;
     background-color: white;
@@ -81,12 +91,20 @@ body {
     background-color: #545255; /* Customize the active section background color as needed */
   }
 
+  /*text - header, paragraphs*/
   h1 {
     color: black;
     padding: 0;
     margin-left: 10px;
   }
 
+  p {
+    text-align: left;
+    padding-left: 15px;
+  }
+
+
+  /*back to top button*/
   #topbttn {
     
     position: fixed; /*fix the location*/
@@ -110,6 +128,7 @@ body {
 
   }
 
+  
   #topbttn.show {
     transition: opacity 0.6s ease;
     opacity: 1;
@@ -121,8 +140,40 @@ body {
   }
 
 
-  p {
-    text-align: left;
-    padding-left: 15px;
+  /*social media icons*/
+  .fa {
+    padding: 10px;
+    font-size: 12px;
+    width: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
   }
 
+  .fa-github {
+    background-color: #35353b;
+    color: white;
+  }
+
+  
+  .fa-instagram {
+    background-color: #35353b;
+    color: white;
+  }
+
+  
+  .fa-linkedin {
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 5px;
+  }
