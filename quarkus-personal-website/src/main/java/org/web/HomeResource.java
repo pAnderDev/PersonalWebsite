@@ -14,4 +14,8 @@ public class HomeResource {
     public InputStream home() {
         return getClass().getResourceAsStream("/META-INF/resources/index.html");
     }
+
+
+//Lets create a way to download my cv - resume
+
 }

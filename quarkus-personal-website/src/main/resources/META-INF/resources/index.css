@@ -139,6 +139,16 @@ body {
     color: white;
   }
 
+  .downloadbttn {
+    background-color: #35353b;
+    border: none;
+    color: white;
+    padding: 0px;
+    margin-right: 14px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
 
   /*social media icons*/
   .fa {
@@ -166,6 +176,7 @@ body {
     color: white;
   }
 
+
   .social-icons {
     display: flex;
     justify-content: center;
@@ -173,6 +184,19 @@ body {
   }
 
   .social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 5px;
+  }
+
+  /*download cv button*/
+  .cv-downloader {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+   .cv-downloader a {
     color: white;
     text-decoration: none;
     margin: 0px 5px;
