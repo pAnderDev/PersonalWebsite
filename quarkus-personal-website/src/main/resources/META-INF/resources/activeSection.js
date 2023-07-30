@@ -1,43 +1,43 @@
 
-const sections = document.querySelectorAll("section");
-const sidebarLinks = document.querySelectorAll(".sidebar a");
-let mainSection = document.querySelector(".main-content");
+// const sections = document.querySelectorAll("section");
+// const sidebarLinks = document.querySelectorAll(".sidebar a");
+// let mainSection = document.querySelector(".main-content");
 
-function setActiveSection(sectionId) {
-    sections.forEach((section) => {
-        section.classList.toggle("active", section.id === sectionId);
-    });
+// function setActiveSection(sectionId) {
+//     sections.forEach((section) => {
+//         section.classList.toggle("active", section.id === sectionId);
+//     });
 
-    sidebarLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
-    });
-}
+//     sidebarLinks.forEach((link) => {
+//         link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
+//     });
+// }
 
-document.addEventListener("scroll", () => {
-    const scrollPosition = mainSection.scrollTop;
-    let activeSection = "about"; //default active section view
-    let maxVisible = 0;
+// document.addEventListener("scroll", () => {
+//     const scrollPosition = mainSection.scrollTop;
+//     let activeSection = "about"; //default active section view
+//     let maxVisible = 0;
 
 
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 10; //adjust based on layout
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.id;
-        if(scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            activeSection = sectionId;
-        }
-        if(sectionTop > maxVisible && sectionTop < scrollPosition) {
-            maxVisible = sectionTop;
-        }
+//     sections.forEach((section) => {
+//         const sectionTop = section.offsetTop - 10; //adjust based on layout
+//         const sectionHeight = section.clientHeight;
+//         const sectionId = section.id;
+//         if(scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+//             activeSection = sectionId;
+//         }
+//         if(sectionTop > maxVisible && sectionTop < scrollPosition) {
+//             maxVisible = sectionTop;
+//         }
     
-    });
+//     });
 
-    setActiveSection(activeSection);
+//     setActiveSection(activeSection);
 
-    if(scrollPosition < maxVisible) {
-        setActiveSection("about");
-    }
-});
+//     if(scrollPosition < maxVisible) {
+//         setActiveSection("about");
+//     }
+// });
 
 
 // const sections = document.querySelectorAll("section");

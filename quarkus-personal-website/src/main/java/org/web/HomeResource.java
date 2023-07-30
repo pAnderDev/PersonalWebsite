@@ -16,6 +16,5 @@ public class HomeResource {
     }
 
 
-//Lets create a way to download my cv - resume
 
 }
