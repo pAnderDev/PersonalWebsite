@@ -7,12 +7,13 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("")
-public class HomeResource {
+@Path("/education")
+public class EducationResource {
+
     @GET
     @Produces(MediaType.TEXT_HTML)
     public InputStream home() {
-        return getClass().getResourceAsStream("/META-INF/resources/pages/index.html");
+        return getClass().getResourceAsStream("/META-INF/resources/pages/education.html");
     }
 
 
