@@ -6,8 +6,9 @@
   --gradient: linear-gradient(147deg,
       #1d23db,
       #5b1fde,
-      #8e1fde,
-      #ce1fde);
+      #550d88,
+      #35353b,
+      #000000);
 }
 
 /*full page background*/
@@ -47,8 +48,6 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  /* Add this line */
-
 
 }
 
@@ -87,6 +86,41 @@ body {
 
 }
 
+/*image styling*/
+
+.pfp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+
+}
+
+#profile-picture {
+  width: 80px;
+  /* Adjust size */
+  height: 80px;
+  /* Adjust size */
+  border-radius: 50%;
+  /* This makes it a circle */
+  object-fit: cover;
+  /* This will ensure your image covers the entire space */
+  margin-bottom: 10px;
+}
+
+.description p {
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.description {
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+
 /*main content section*/
 .main-content {
   flex: 1;
@@ -102,21 +136,14 @@ body {
   padding-right: 15vw;
   /* Adjust the top and bottom padding to create space */
   word-wrap: break-word; /* Add this line to wrap text */
+
 }
+
 .main-content p {
   text-align: left;
-  margin-right: -10vw;
-  margin-left: -10vw;
-  
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
-
-.main-content h1 {
-  text-align: left;
-  margin-left: 0px;
-  margin-right: -10vw;
-  margin-left: -10vw;
-}
-
 
 section.active {
   background-color: #ce1fde;
@@ -127,7 +154,7 @@ section.active {
 h1 {
   color: black;
   padding: 0;
-  margin-left: 10px;
+  margin-left: 10vw;
   text-decoration: underline #ce1fde solid;
   font-family: 'Playfair Display', serif;
 }
@@ -136,58 +163,41 @@ h1 {
 #topbttn {
 
   position: fixed;
+  display: flex;
   /*fix the location*/
   bottom: 20px;
-  /*set it 20px from the bottom*/
   right: 40px;
-  /*set it 40px from the right*/
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   z-index: 99;
   /*setting so it doesnt overlap*/
   border: 3px solid #191923;
   /*black border*/
   outline: none;
-  /*no outline*/
   background-color: white;
-  /*button color is pink*/
   color: black;
   /*text color is white*/
   cursor: pointer;
   /*pointer cursor*/
   padding: 12px;
-  /*some square padding*/
   border-radius: 50%;
-  /*rounded edges*/
-  font-size: 24px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  /* Start with opacity 0 to hide the button */
-  transition: opacity 0.6s ease;
-
+ 
 }
 
-
-#topbttn.show {
-  transition: opacity 0.6s ease;
-  opacity: 1;
+#topbttn i {
+  position: relative;
+  transform: translate(-5%, -25%);
 }
 
 #topbttn:hover {
   background-color: #191923;
   color: white;
 }
+/*back to top button*/
 
-.downloadbttn {
-  background-color: #35353b;
-  border: none;
-  color: white;
-  padding: 0px;
-  margin-right: 14px;
-  cursor: pointer;
-  font-size: 12px;
-}
 
 
 /*social media icons*/
@@ -230,42 +240,15 @@ h1 {
 }
 
 /*download cv button*/
-.cv-downloader {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-}
-
-.cv-downloader a {
+.downloadbttn {
+  background-color: #35353b;
+  border: none;
   color: white;
-  text-decoration: none;
-  margin: 0px 5px;
+  justify-content: center;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: .8vw;
 }
 
-/*image styling*/
 
-.pfp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-
-}
-
-#profile-picture {
-  width: 80px;
-  /* Adjust size */
-  height: 80px;
-  /* Adjust size */
-  border-radius: 50%;
-  /* This makes it a circle */
-  object-fit: cover;
-  /* This will ensure your image covers the entire space */
-  margin-bottom: 10px;
-}
-
-.description {
-  margin: 0;
-  text-align: center;
-  font-size: 10px;
-}

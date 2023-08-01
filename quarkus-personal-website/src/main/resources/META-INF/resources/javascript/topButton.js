@@ -1,26 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    let topButton = document.getElementById("topbttn");
+    var topButton = document.getElementById("topbttn");
     let main = document.querySelector(".main-content");
 
     function scrollFunction() {
 
-        print(`scrollHeight: ${scrollHeight}, scrollTop: ${scrollTop}, clientHeight: ${clientHeight}`);  // Log the values to see if they are correct
         const scrollHeight = main.scrollHeight;
         const scrollTop = main.scrollTop;
         const clientHeight = main.clientHeight;
 
-        if (scrollTop + clientHeight >= scrollHeight - 25 || main.scrollTop > scrollHeight - 25) {
-            topButton.style.display = "block";
-            topButton.classList.add("show");
+        console.log(`scrollHeight: ${scrollHeight}, scrollTop: ${scrollTop}, clientHeight: ${clientHeight}`);  // Log the values to see if they are correct
 
+        
+        if (scrollTop + clientHeight >= scrollHeight - 25) {
+            topButton.style.display = "block";
         }
         else {
-            topButton.classList.remove("show");
             topButton.style.display = "none";
         }
     }
-
 
     function topFunction() {
         main.scrollTop = 0; //For Safari
