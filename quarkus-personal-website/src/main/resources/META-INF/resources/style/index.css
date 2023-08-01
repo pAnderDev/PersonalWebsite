@@ -62,6 +62,9 @@ body {
   margin-bottom: 10px;
 }
 
+.sidebar li:hover {
+  text-decoration: #1d23db solid underline 3px;
+}
 .sidebar p {
   padding-left: 15px;
 }
@@ -72,7 +75,7 @@ body {
 }
 
 .sidebar a.active {
-  border-bottom: 10px solid #ce1fde;
+  border-bottom: 10px solid #1d23db;
   text-decoration: underline;
   background-clip: content-box;
 }
@@ -155,7 +158,21 @@ h1 {
   color: black;
   padding: 0;
   margin-left: 10vw;
-  text-decoration: underline #ce1fde solid;
+  text-decoration: underline #1d23db solid 3px;
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  color: black;
+  padding: 0;
+  margin-left: 2vw;
+  font-family: 'Playfair Display', serif;
+}
+
+h3 {
+  color: black;
+  padding: 0;
+  margin-left: 5vw;
   font-family: 'Playfair Display', serif;
 }
 
