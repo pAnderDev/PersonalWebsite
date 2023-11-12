@@ -13,9 +13,19 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
 
 public class DatabaseService {
     @Inject MongoClient mongoClient;
+
+    private MongoDatabase connect(String collectionName) {
+        MongoDatabase db = mongoClient.getDatabase(collectionName);
+        return db;
+    }
 
     public Document getCVData() {
         MongoDatabase db = mongoClient.getDatabase("personal-website-db");
@@ -23,4 +33,12 @@ public class DatabaseService {
         Document cvData = collection.find().first();
         return cvData;
     }
+
+    private void loadJsonToMongoDB(String collectionName, String jsonFilePath) throws IOException {
+        MongoDatabase db = connect("personal-website-db");
+
+        String jsonContent = new String(Files.readAllBytes(Paths.get(jsonFilePath)));
+        
+    }
+
 }
