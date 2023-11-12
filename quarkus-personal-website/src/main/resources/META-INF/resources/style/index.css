@@ -65,9 +65,6 @@ body {
 .sidebar li:hover {
   text-decoration: #1d23db solid underline 3px;
 }
-.sidebar p {
-  padding-left: 15px;
-}
 
 .sidebar a {
   color: white;
