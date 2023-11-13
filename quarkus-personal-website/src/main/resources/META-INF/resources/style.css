@@ -196,3 +196,66 @@ section .header{
 .card-style .card a:hover{
     color: #1e40af;
 }
+
+/*side scrolling cards*/
+.card-style-horizontal{
+    margin-top: 4rem;
+    display:table-row;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card-style-horizontal .card-horizontal{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card-style-horizontal .card-horizontal:hover{
+    background-color: #323232;
+    border-color: #1e40af;
+}
+
+.card-style-horizontal .card-horizontal span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.card-style-horizontal .card-horizontal h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-style-horizontal .card-horizontal h5{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-style: italic;
+}
+
+.card-style-horizontal .card-horizontal p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.card-style-horizontal .card-horizontal li{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.card-style-horizontal .card-horizontal a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.card-style-horizontal .card-horizontal a:hover{
+    color: #1e40af;
+}
