@@ -200,7 +200,7 @@ section .header{
 /*side scrolling cards*/
 .card-style-horizontal{
     margin-top: 4rem;
-    display: flex;
+    display: grid;
     gap: 2rem;
     
 }
