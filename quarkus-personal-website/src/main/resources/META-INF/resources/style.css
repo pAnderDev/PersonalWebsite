@@ -200,12 +200,12 @@ section .header{
 /*side scrolling cards*/
 .card-style-horizontal{
     margin-top: 4rem;
-    display:table-row;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 2rem;
+    
 }
 
-.card-style-horizontal .card-horizontal{
+.card-style-horizontal .card-horizontal {
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
@@ -258,4 +258,30 @@ section .header{
 
 .card-style-horizontal .card-horizontal a:hover{
     color: #1e40af;
+}
+
+/*Project navigation bars*/
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    background: #fff;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
 }
