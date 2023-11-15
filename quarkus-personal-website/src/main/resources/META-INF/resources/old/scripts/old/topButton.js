@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var topButton = document.getElementById("topbttn");
-    let main = document.querySelector(".main-content");
+    let main = document.querySelector("nav-logo");
 
     function scrollFunction() {
 

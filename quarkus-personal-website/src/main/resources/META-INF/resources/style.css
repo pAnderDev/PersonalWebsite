@@ -286,3 +286,24 @@ input[name="r"] {
     position: absolute;
     visibility: hidden;
 }
+
+/*Button style*/
+
+.btn-container {
+    display: flex;
+    gap: 25px; /* Adjust the gap as needed */
+}
+
+.btn {
+    padding: .25rem .5rem;
+    font-size: .75rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn i {
+    padding-right: .5rem;
+}
