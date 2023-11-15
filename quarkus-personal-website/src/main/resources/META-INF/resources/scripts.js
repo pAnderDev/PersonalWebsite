@@ -4,7 +4,7 @@ function scrollToElement(elementSelector, instance) {
     // Check if there are elements matching the selector and if the requested instance exists
     if (elements.length > instance) {
         // Scroll to the specified instance of the element
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
+        elements[instance].scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -13,14 +13,14 @@ const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
 
 link1.addEventListener('click', () => {
-    scrollToElement('.header', 1);
+    scrollToElement('.header', 0);
 });
 
 link2.addEventListener('click', () => {
     // Scroll to the second element with "header" class
-    scrollToElement('.header', 2);
+    scrollToElement('.header', 1);
 });
 
 link3.addEventListener('click', () => {
-    scrollToElement('.header', 3);
+    scrollToElement('.header', 2);
 });
