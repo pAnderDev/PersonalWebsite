@@ -333,3 +333,22 @@ input[name="r"] {
     border-color: #1d4ed8;
 }
 
+@media (width < 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    image{
+        grid-area: 1/1/2/2;
+    }
+
+    .card-style {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+

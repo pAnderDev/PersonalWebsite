@@ -3,6 +3,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function () {
+
     $(".bar").click(function () {
         // Remove active class from all bars
         $(".bar").removeClass("active");
@@ -17,5 +18,6 @@ $(document).ready(function () {
 
         // Show the card corresponding to the clicked bar
         $(".card-horizontal").eq(index).show();
+
     });
 });
