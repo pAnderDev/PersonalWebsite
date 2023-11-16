@@ -307,3 +307,29 @@ input[name="r"] {
 .btn i {
     padding-right: .5rem;
 }
+
+
+.socials {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 2rem;
+
+
+}
+
+.socials a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.socials a:hover{
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
